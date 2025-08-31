@@ -9,7 +9,7 @@ public class HelloController {
 
     @PostMapping("/hello")
     public HelloResponse hello(@RequestBody HelloRequest request) {
-        return new HelloResponse("Ciao, " + request.getName());
+        return new HelloResponse("Hello, " + request.getName());
     }
     
     static class HelloRequest {
