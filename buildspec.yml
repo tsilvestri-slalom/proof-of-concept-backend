@@ -22,5 +22,9 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
-      - echo Updating ECS service...
-      - aws ecs update-service --cluster hello-world-cluster --service hello-world-backend-service --force-new-deployment
+      - echo Writing image definitions file...
+      - printf '[{"name":"%s-backend","imageUri":"%s"}]' "$PROJECT_NAME" "$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG" > imagedefinitions.json
+      - cat imagedefinitions.json
+artifacts:
+  files:
+    - imagedefinitions.json
