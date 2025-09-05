@@ -1,9 +1,10 @@
-FROM openjdk:17-jdk-slim
+FROM public.ecr.aws/docker/library/openjdk:17-jdk-slim
 
 WORKDIR /app
 
+# Copy your application files here
 COPY target/*.jar app.jar
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
