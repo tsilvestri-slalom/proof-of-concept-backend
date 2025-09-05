@@ -8,9 +8,9 @@ This proof of concept demonstrate
 
 This backend repository is part of a 3-repository system:
 
-- ** [proof-of-concept-infrastructure](https://github.com/tsilvestri-slalom/proof-of-concept-infrastructure)** - Terraform IaC (deploy this FIRST)
-- ** [proof-of-concept-backend](https://github.com/tsilvestri-slalom/proof-of-concept-backend)** ← **You are here** - Java Spring Boot API  
-- ** [proof-of-concept-frontend](https://github.com/tsilvestri-slalom/proof-of-concept-frontend)** - React application
+- **[proof-of-concept-infrastructure](https://github.com/tsilvestri-slalom/proof-of-concept-infrastructure)** - Terraform IaC (deploy this FIRST)
+- **[proof-of-concept-backend](https://github.com/tsilvestri-slalom/proof-of-concept-backend)** ← **You are here** - Java Spring Boot API  
+- **[proof-of-concept-frontend](https://github.com/tsilvestri-slalom/proof-of-concept-frontend)** - React application
 
 ![Infrastructure Architecture](docs/images/proof-of-concept-infrastructure.png)
 
